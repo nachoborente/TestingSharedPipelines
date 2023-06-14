@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0                           https://maven.apache.org/xsd/settings-1.0.0.xsd">
+	<localRepository>${user.home}/.m2/repository</localRepository>
+	<interactiveMode/>
+	<usePluginRegistry/>
+	<offline/>
+	<pluginGroups>
+		<pluginGroup>org.mule.tools</pluginGroup>
+	</pluginGroups>
+	<servers>
+		<!-- Roche Exchange ID -->
+		<server>
+			<id>Cloudhub</id>
+			<username>usertest001</username>
+			<password>password001</password>
+		</server>
+		<!-- Anypoint Exchange -->
+		<server>
+			<id>anypoint-exchange-v2</id>
+			<username>usertest001</username>
+			<password>pass001</password>
+		</server>
+		<!-- Enterprise Edition 
+		<server>
+            <id>MuleRepository-EE-Nexus</id>
+            <username>proquire.llc.nexus</username>
+            <password>OIlWusKs</password>
+        </server>
+		-->
+	</servers>
+	<mirrors>
+		<mirror>
+			<id>https-mirror</id>
+			<name>HTTPS Mirror Repository for Mule</name>
+			<url>https://repository.mulesoft.org/releases/</url>
+			<mirrorOf>mulesoft-release</mirrorOf>
+		</mirror>
+	</mirrors>
+	<proxies/>
+	<profiles>
+		<profile>
+			<id>Mule</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<!-- Maven Repository 
+				<repository>
+					<id>mavenCentral</id>
+					<name>Maven Central</name>
+					<url>https://repo1.maven.org/maven2/</url>
+					<layout>default</layout>
+				</repository>
+				-->
+				<!-- Public Repositories -->
+				<repository>
+					<id>mulesoft-releases</id>
+					<name>MuleSoft Repository</name>
+					<url>https://repository.mulesoft.org/releases/</url>
+					<layout>default</layout>
+				</repository>
+				<repository>
+					<id>mulesoft-snapshots</id>
+					<name>MuleSoft Snapshot Repository</name>
+					<url>https://repository.mulesoft.org/snapshots/</url>
+					<layout>default</layout>
+				</repository>
+				<repository>
+					<id>mulesoft-public</id>
+					<name>MuleSoft Public Repository</name>
+					<url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+					<layout>default</layout>
+				</repository>
+				<repository>
+					<id>anypoint-exchange-v2</id>
+					<name>Anypoint Exchange</name>
+					<url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
+					<layout>default</layout>
+				</repository>
+				<repository>
+					<id>Viavansi</id>
+					<name>Viavansi Repositorio</name>
+					<url>https://repositorio.viavansi.com/repo</url>
+					<layout>default</layout>
+				</repository>
+
+				<!-- Enterprise Edition 
+				<repository>
+					<id>MuleRepository-EE-Nexus</id>
+					<name>MuleRepository</name>
+					<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+				-->
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>mule-public</id>
+					<url>https://repository.mulesoft.org/nexus/content/repositories/public</url>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+		<profile>
+			<id>archetype-repository</id>
+			<repositories>
+				<repository>
+					<id>archetype</id>
+					<name>Mule Repository</name>
+					<url>https://repository-master.mulesoft.org/nexus/content/repositories/public</url>
+					<releases>
+						<enabled>true</enabled>
+						<checksumPolicy>fail</checksumPolicy>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<checksumPolicy>warn</checksumPolicy>
+					</snapshots>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+	<activeProfiles/>
+</settings>
