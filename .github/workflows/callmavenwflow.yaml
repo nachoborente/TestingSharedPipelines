@@ -1,4 +1,4 @@
-name: Testing ReusableWorkflow00
+name: Testing MavenWorkflow
 on: 
   push:
     branches: 
@@ -8,7 +8,7 @@ on:
 
 jobs:
     call-workflow-passing-data:
-      uses: nachoborente/PublicPipelineSharedLibrary/.github/workflows/ReusableWorkflow00.yml@main
+      uses: nachoborente/PublicPipelineSharedLibrary/.github/workflows/mavenworkflow01.yml@main
       with:
-        testvar: 'hello world, calling to ReusableWorkflow00'
+        testvar: 'hello world, calling to mavenworkflow01, test01'
       secrets: inherit
