@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
     call-workflow-passing-data:
-      uses: nachoborente/PipelinesSharedLibrary/.github/workflows/ReusableWorkflow00.yml@main
+      uses: nachoborente/PublicPipelinesSharedLibrary/.github/workflows/ReusableWorkflow00.yml@main
       with:
         testvar: 'hello from the other side'
       secrets: inherit
