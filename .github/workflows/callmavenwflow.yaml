@@ -10,5 +10,5 @@ jobs:
     call-workflow-passing-data:
       uses: nachoborente/PublicPipelineSharedLibrary/.github/workflows/ReusableWorkflow00.yml@main
       with:
-        testvar: 'hello from the other side'
+        testvar: 'hello world, calling to ReusableWorkflow00'
       secrets: inherit
