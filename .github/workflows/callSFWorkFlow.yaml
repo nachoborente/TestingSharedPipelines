@@ -2,7 +2,7 @@ name: Testing SalesforceWorkFlow
 on: 
   push:
     branches: 
-      - main
+      - develop
     paths:
       - 'sfapp/**'
 
