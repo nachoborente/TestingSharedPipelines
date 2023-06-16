@@ -1,0 +1,14 @@
+name: Testing SalesforceWorkFlow
+on: 
+  push:
+    branches: 
+      - main
+    paths:
+      - 'sfapp/**'
+
+jobs:
+    call-workflow-passing-data:
+      uses: nachoborente/PublicPipelineSharedLibrary/.github/workflows/sf_workflow01.yml@main
+      with:
+        testvar: 'hello world, calling to sfworkflow01, test01'
+      secrets: inherit
