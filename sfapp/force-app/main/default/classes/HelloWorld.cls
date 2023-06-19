@@ -1,8 +1,7 @@
 public class HelloWorld {
 
     public HelloWorld(){
-        //launch workflow- #10
-        //command added from develop folder
+        //launch workflow- #11
         System.debug('Hello World');
     }
     
